@@ -1,0 +1,45 @@
+<html>
+    
+    <head>
+        <script type="text/javascript" src="info.js"></script>
+        <script type="text/javascript" src="problemFinder.js"></script>
+        <script type="text/javascript" src="submissionAnalysis.js"></script>
+        <script type="text/javascript" src="loader.js"></script>
+        <script type="text/javascript" src="banner.js"></script>
+        <script type="text/javascript" src="rating.js"></script>
+        <script type="text/javascript" src="contest.js"></script>
+        <style>
+            table,tr,th,td{
+                border: 2px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            var url = window.location.toString() ;
+            var handle = url.substring(url.indexOf("=")+1);
+        </script>
+
+        
+        <div id="bannerDiv">
+            <table>  
+                <tr id="banner"> 
+
+                </tr>
+            </table>
+        </div>
+
+        <input type="text" id="category" placeholder="problem category">
+        <input type="button" name="find" value="find" onclick="javascript:problemFinder();">
+        <script>
+            ////////////func_name,handle,title/////
+            addToBanner('info',handle,'info');
+            addToBanner('submissions',handle,'Submissions');
+            addToBanner('rating',handle,'rating change');
+            addToBanner('contest','','upcoming contests');
+        </script>
+        <div id="result"> Loading ...</div>
+    </body>
+
+
+</html>
